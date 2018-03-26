@@ -1,5 +1,7 @@
 package edu.mum.domian;
 
+import edu.mum.enums.LoanType;
+
 public class Loan {
 	
 	private long id;
@@ -14,6 +16,7 @@ public class Loan {
 	
 	private Customer customer;
 	private Bank bank;
+	private LoanType loanType;
 	
 	
 	public String getCategory() {
@@ -69,6 +72,12 @@ public class Loan {
 	}
 	public void setBank(Bank bank) {
 		this.bank = bank;
+	}
+	public LoanType getLoanType() {
+		return loanType;
+	}
+	public void setLoanType(LoanType loanType) {
+		this.loanType = loanType;
 	}
 	
 	
