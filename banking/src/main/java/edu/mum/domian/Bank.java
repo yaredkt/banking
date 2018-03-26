@@ -19,6 +19,7 @@ public class Bank {
 	
 	private List<Loan> loan;
 	
+	
 
 	public String getName() {
 		return Name;
