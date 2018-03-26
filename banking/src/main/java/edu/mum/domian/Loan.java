@@ -11,6 +11,11 @@ public class Loan {
 	private int duration;
 	private String status;
 	private double payment;
+	
+	private Customer customer;
+	private Bank bank;
+	
+	
 	public String getCategory() {
 		return category;
 	}
@@ -53,6 +58,20 @@ public class Loan {
 	public void setId(long id) {
 		this.id = id;
 	}
+	public Customer getCustomer() {
+		return customer;
+	}
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+	public Bank getBank() {
+		return bank;
+	}
+	public void setBank(Bank bank) {
+		this.bank = bank;
+	}
+	
+	
 	
 	
 	

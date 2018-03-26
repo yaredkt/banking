@@ -1,5 +1,7 @@
 package edu.mum.domian;
 
+import java.util.List;
+
 public class Address {
 	
 	private long id;
@@ -10,6 +12,9 @@ public class Address {
 	private String state;
 	private String email;
 	private int phoneNumber;
+	
+
+	
 	public long getId() {
 		return id;
 	}
@@ -52,6 +57,9 @@ public class Address {
 	public void setPhoneNumber(int phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
+	
+	
+	
 	
 
 }
