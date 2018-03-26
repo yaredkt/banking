@@ -1,12 +1,15 @@
 package edu.mum.domian;
 
+import edu.mum.enums.LoanType;
+
 public class LoanApplication {
      
     private Long id;
     private String approval_Status;
     private Integer application_Number;
     private Double amount_Limit;
-    private String type;
+    
+    private LoanType type;
     
     private Customer cusomer;
 
@@ -42,11 +45,12 @@ public class LoanApplication {
 		this.amount_Limit = amount_Limit;
 	}
 
-	public String getType() {
+	public LoanType getType() {
 		return type;
 	}
 
-	public void setType(String type) {
+	public void setType(LoanType type) {
+		
 		this.type = type;
 	}
 
