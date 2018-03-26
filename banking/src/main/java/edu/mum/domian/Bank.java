@@ -15,7 +15,7 @@ public class Bank {
 	
 	private List<RegulatoryAgencies> regulatoryAgencies;
 	
-	//private List<Account> accounts;
+	private List<Account> account;
 	
 	private List<Loan> loan;
 	
