@@ -9,6 +9,13 @@ public class Account {
 	private double interestRate;
 	private long balance;
 	private String status;
+	
+	private Bank bank;
+	private Withdraw withdraw;
+	private Deposit deposit;
+	private Customer customer;
+	
+	
 	public int getAcountNumber() {
 		return acountNumber;
 	}
@@ -45,6 +52,32 @@ public class Account {
 	public void setId(long id) {
 		this.id = id;
 	}
+	public Bank getBank() {
+		return bank;
+	}
+	public void setBank(Bank bank) {
+		this.bank = bank;
+	}
+	public Withdraw getWithdraw() {
+		return withdraw;
+	}
+	public void setWithdraw(Withdraw withdraw) {
+		this.withdraw = withdraw;
+	}
+	public Deposit getDeposit() {
+		return deposit;
+	}
+	public void setDeposit(Deposit deposit) {
+		this.deposit = deposit;
+	}
+	public Customer getCustomer() {
+		return customer;
+	}
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+	
+	
 	
 	
 	
