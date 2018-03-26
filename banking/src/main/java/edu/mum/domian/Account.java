@@ -1,11 +1,13 @@
 package edu.mum.domian;
 
+import edu.mum.enums.AccountType;
+
 public class Account {
 	
 	private long id;
 		
 	private int acountNumber;
-	private String type;
+	private AccountType account;
 	private double interestRate;
 	private long balance;
 	private String status;
@@ -22,11 +24,12 @@ public class Account {
 	public void setAcountNumber(int acountNumber) {
 		this.acountNumber = acountNumber;
 	}
-	public String getType() {
-		return type;
+	
+	public AccountType getAccount() {
+		return account;
 	}
-	public void setType(String type) {
-		this.type = type;
+	public void setAccount(AccountType account) {
+		this.account = account;
 	}
 	public double getInterestRate() {
 		return interestRate;
