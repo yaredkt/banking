@@ -50,6 +50,7 @@ public class LoanApplication {
 	}
 
 	public void setType(LoanType type) {
+		
 		this.type = type;
 	}
 
