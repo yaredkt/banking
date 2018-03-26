@@ -2,6 +2,8 @@ package edu.mum.domian;
 
 import java.util.Date;
 
+import edu.mum.enums.AccountType;
+
 public class Deposit {
 	
 	
@@ -10,6 +12,8 @@ public class Deposit {
 	private double amount;
 	private Date depositDate;
 	private int transactionId;
+	private Account account;
+	
 	public double getAmount() {
 		return amount;
 	}
@@ -34,6 +38,14 @@ public class Deposit {
 	public void setId(long id) {
 		this.id = id;
 	}
+	public Account getAccount() {
+		return account;
+	}
+	public void setAccountType(Account account) {
+		this.account = account;
+	}
+	
+	
 	
 
 }
