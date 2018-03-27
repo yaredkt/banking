@@ -28,6 +28,7 @@
   			<scope>import</scope>
   		</dependency>
   		
+  		
   		<dependency>
   			<groupId>io.spring.platform</groupId>
   			<artifactId>platform-bom</artifactId>
@@ -74,4 +75,10 @@
   		<artifactId>spring-orm</artifactId>
   	</dependency>
   </dependencies>
+  
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  
 </project>
