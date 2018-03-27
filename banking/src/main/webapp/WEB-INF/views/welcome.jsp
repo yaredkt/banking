@@ -14,9 +14,9 @@
 <body>
 
 	<div class="jumbotron">
+		
 		<h1>${greeting}</h1>
 		
-
 	</div>
 
 </body>

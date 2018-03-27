@@ -1,9 +1,19 @@
 package edu.mum.domian;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
+
 import edu.mum.enums.LoanType;
 
+@Entity
 public class Loan {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
 	
