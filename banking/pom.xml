@@ -28,6 +28,7 @@
   			<scope>import</scope>
   		</dependency>
   		
+  		
   		<dependency>
   			<groupId>io.spring.platform</groupId>
   			<artifactId>platform-bom</artifactId>
@@ -76,5 +77,40 @@
   		<groupId>org.springframework</groupId>
   		<artifactId>spring-orm</artifactId>
   	</dependency>
+
+  	
+  	<dependency>
+  		<groupId>org.codehaus.jackson</groupId>
+  		<artifactId>jackson-mapper-asl</artifactId>
+  	</dependency>
+  	
+  	<dependency>
+  		<groupId>cglib</groupId>
+  		<artifactId>cglib-nodep</artifactId>
+  		<version>2.2.2</version> 
+  	</dependency>
+  	
+  	<dependency>
+  		<groupId>mysql</groupId>
+  		<artifactId>mysql-connector-java</artifactId>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.codehaus.jackson</groupId>
+  		<artifactId>jackson-mapper-asl</artifactId>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.hibernate</groupId>
+  		<artifactId>hibernate-validator</artifactId>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.hibernate</groupId>
+  		<artifactId>hibernate-entitymanager</artifactId>
+  	</dependency>
   </dependencies>
+  
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  
 </project>

@@ -1,5 +1,9 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: bereket
+=======
+Built-By: muller
+>>>>>>> cb25e8e461738aa10f1194bf4c0fe0f693cbd0f5
 Build-Jdk: 1.8.0_144
 Created-By: Maven Integration for Eclipse
 
