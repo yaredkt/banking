@@ -1,4 +1,4 @@
-package edud.mum.service.impl;
+package edu.mum.service.impl;
 
 import edu.mum.service.WithdrawService;
 
