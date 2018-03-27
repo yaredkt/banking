@@ -6,7 +6,7 @@
     <init-param>
       <param-name>contextConfigLocation</param-name>
       <param-value>
- 				classpath*:**/*Context.xml
+ 				classpath*:**/*context.xml
  			</param-value>
     </init-param>
   </servlet>
@@ -17,7 +17,7 @@
   <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>
-       		classpath*:**/*context.xml
+       		classpath*:**/*Context.xml
        		
   		</param-value>
   
