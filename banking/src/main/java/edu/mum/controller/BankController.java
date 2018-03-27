@@ -11,9 +11,9 @@ public class BankController {
 	@RequestMapping("/")
 	public String welcome(Model model) {
 		
-		model.addAttribute("greeting", "welcome to online Banking");
+		model.addAttribute("welcome", new String("welcome to online Banking"));
 	
-		return "welcome";
+		return "home";
 	
 	}
 	
