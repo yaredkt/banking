@@ -1,10 +1,14 @@
 package edu.mum.domian;
 
+import java.util.List;
+
 public class Customer {
 	
 	private String id;
 	private String name;
     private String ssn;
+    
+    private List<LoanApplication> loanApplications;
     
     private Address address;
 
@@ -38,6 +42,14 @@ public class Customer {
 
 	public void setAddress(Address address) {
 		this.address = address;
+	}
+
+	public List<LoanApplication> getLoanApplications() {
+		return loanApplications;
+	}
+
+	public void setLoanApplications(List<LoanApplication> loanApplications) {
+		this.loanApplications = loanApplications;
 	}
     
     

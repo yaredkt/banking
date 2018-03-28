@@ -1,16 +1,33 @@
 package edu.mum.domian;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
 import edu.mum.enums.LoanType;
 
+@Entity
 public class LoanApplication {
-     
-    private Long id;
-    private String approval_Status;
-    private Integer application_Number;
-    private Double amount_Limit;
     
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+   
+	
+	private String approval_Status;
+   
+	@Column(name = "appNumber")
+	private Integer application_Number;
+	@Column(name = "amount")
+    private Double amount_Limit;
+	
+	@Column(name = "type")
     private LoanType type;
     
+	
     private Customer cusomer;
 
 	public Long getId() {
