@@ -4,18 +4,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-
-
-import edu.mum.enums.LoanType;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Loan {
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
-	
+	private long id;	
 	
 	private String category;
 	private long loanNumber;
@@ -24,7 +19,9 @@ public class Loan {
 	private String status;
 	private double payment;
 	
+	@OneToOne
 	private Customer customer;
+	@OneToOne
 	private Bank bank;
 	
 	
