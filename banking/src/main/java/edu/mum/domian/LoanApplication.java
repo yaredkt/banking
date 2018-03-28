@@ -1,11 +1,14 @@
 package edu.mum.domian;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import edu.mum.enums.LoanType;
 
@@ -27,7 +30,8 @@ public class LoanApplication {
 	@Column(name = "type")
     private LoanType type;
     
-	
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@JoinColumn(name = "loanapplication_customer")
     private Customer cusomer;
 
 	public Long getId() {

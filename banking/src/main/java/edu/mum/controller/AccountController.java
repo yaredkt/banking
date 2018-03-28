@@ -1,12 +1,12 @@
 package edu.mum.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import edu.mum.service.AccountService;
+
 
 @Controller
 @RequestMapping("/admin")
@@ -15,10 +15,24 @@ public class AccountController {
 //	@Autowired
 //	private AccountService accountService;
 	
-	@RequestMapping(value= "/account/{id}", method= RequestMethod.GET )
+	@RequestMapping(value= "/account", method= RequestMethod.GET )
 	public String findOne(Model model) {
 
-		return "accounts";
+		model.addAttribute(model);
+		
+		return "manageAccount";
+	}
+	
+	@RequestMapping(value="/addAccount", method = RequestMethod.GET)
+	public String addAccount() {
+		
+		return "addAccount";
+	}
+	
+	@RequestMapping(value="/addAccount", method = RequestMethod.POST)
+	public String saveAccount() {
+		
+		return "addAccount";
 	}
 	
 }

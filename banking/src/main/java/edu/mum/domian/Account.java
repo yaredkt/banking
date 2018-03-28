@@ -2,16 +2,25 @@ package edu.mum.domian;
 
 
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 import edu.mum.enums.AccountType;
+
+
 @Entity
 public class Account {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name = "account_id")
 	private long id;
 		
 	private int acountNumber;
@@ -20,9 +29,20 @@ public class Account {
 	private long balance;
 	private String status;
 	
+	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@JoinColumn(name= "account_bank")
 	private Bank bank;
+	
+	@OneToOne( fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@JoinColumn(name="account_withdraw")
 	private Withdraw withdraw;
+	
+	@OneToOne(fetch=FetchType.LAZY, cascade={CascadeType.PERSIST,CascadeType.REMOVE})
+	@JoinColumn(name="account_deposit")
 	private Deposit deposit;
+	
+	@ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+	@JoinColumn(name = "account_Customer")
 	private Customer customer;
 	
 	
