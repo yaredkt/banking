@@ -9,7 +9,7 @@ public class Withdraw {
 	private Date date;
 	private Integer transaction_id;
 	
-	private Account account;
+//	private Account account;
 	
 	public Long getId() {
 		return id;
@@ -35,13 +35,13 @@ public class Withdraw {
 	public void setTransaction_id(Integer transaction_id) {
 		this.transaction_id = transaction_id;
 	}
-	public Account getAccount() {
-		return account;
-	}
-	public void setAccount(Account account) {
-		this.account = account;
-	}
-	
+//	public Account getAccount() {
+//		return account;
+//	}
+//	public void setAccount(Account account) {
+//		this.account = account;
+//	}
+//	
 	
 	
 }

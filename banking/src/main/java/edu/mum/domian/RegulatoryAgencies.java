@@ -1,6 +1,13 @@
 package edu.mum.domian;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 
 public class RegulatoryAgencies {
 	
@@ -8,7 +15,10 @@ public class RegulatoryAgencies {
 		
 	private String type;
 	private String name;
-	private List<Bank> banks;
+	
+	@ManyToMany(fetch = FetchType.LAZY, cascade= CascadeType.ALL)
+    @JoinTable(name="BankRequlatoryAgencies", joinColumns= {@JoinColumn(name="Bank")}, inverseJoinColumns = {@JoinColumn(name="RegulatoryAgencies")})
+	private List<Bank> bank = new ArrayList<>();
 	
 	public long getId() {
 		return id;
@@ -30,10 +40,10 @@ public class RegulatoryAgencies {
 	}
 	
 	public List<Bank> getBanks() {
-		return banks;
+		return bank;
 	}
 	public void setBanks(List<Bank> banks) {
-		this.banks = banks;
+		this.bank = banks;
 	}
 	
 

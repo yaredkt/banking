@@ -1,9 +1,13 @@
 package edu.mum.domian;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -19,9 +23,12 @@ public class Loan {
 	private String status;
 	private double payment;
 	
-	@OneToOne
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@JoinColumn(name = "loan_customer")
 	private Customer customer;
-	@OneToOne
+	
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@JoinColumn(name = "loan_bank")
 	private Bank bank;
 	
 	
